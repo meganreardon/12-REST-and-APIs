@@ -3,7 +3,7 @@
   var user = {};
 
   repos.allRepos = [];
-  user.allUser = [];
+  // user.allUser;
 
   repos.requestRepos = function(callback) {
     /* TODO: How would you like to fetch your repos? Someone say AJAX?!
