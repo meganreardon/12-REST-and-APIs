@@ -33,14 +33,6 @@
     <script id="author-template" type="text/x-handlebars-template">
       <li><strong>{{name}}</strong>: {{numWords}} words written</li>
     </script>
-    <script id="github-info" type="text/x-handlebars-template">
-      <li>
-        <p>name:{{name}}</p>
-        <p>login:{{login}}</p>
-        <p>followers:{{followers}}</p>
-        <p>following:{{following}}</p>
-      </li>
-    </script>
     <script id="repo-template" type="text/x-handlebars-template">
          <li>
            <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a></li>
@@ -55,7 +47,14 @@
              <p>Number of people stargazing this repo: {{stargazers_count}}.</p>
            {{/if}}
          </li>
-       </script>
+    </script>
+    <script id="github-info-template" type="text/x-handlebars-template">
+      <p>name: {{name}}</p>
+      <p>login: {{login}}</p>
+      <p>followers: {{followers}}</p>
+      <p>following: {{following}}</p>
+
+    </script>
   </head>
   <body>
     <header class="site-header clearfix">
@@ -105,7 +104,6 @@
         <section>
           <h1>Check out my Projects on GitHub:</h1>
           <section id='github-info'>
-          
           </section>
           <ul>
             <li>Coding Projects Go Here</li>
