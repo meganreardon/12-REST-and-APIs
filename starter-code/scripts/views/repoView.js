@@ -10,7 +10,7 @@
   };
 
   var userCompiler = function(user) {
-    var template = Handlebars.compile($('#githubInfo').text());
+    var template = Handlebars.compile($('#github-info-template').text());
     return template(user);
   };// Finish the Handlebars method here!
 
@@ -22,7 +22,7 @@
   };
 
   userView.renderUser = function() {
-    $('#github-info').append(user.allUser.userCompiler);
+    $('#github-info').append(userCompiler(user.allUser));
   };
 /* TODO: Call the function that loads (or 'requests') our repo data.
     Pass in some view function as a higher order callback, so our repos
